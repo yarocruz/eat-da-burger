@@ -12,7 +12,7 @@ const orm = {
         })
     },
     insertOne: function (table, cols, val, callback) {
-        let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${val});`
+        let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES ('${val}');`
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;

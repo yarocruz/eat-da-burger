@@ -6,6 +6,11 @@ const burger = {
             callback(res)
         })
     },
+    add: function (column, values, callback) {
+        orm.insertOne('burgers', column, values, function (res) {
+            callback(res);
+        })
+    },
 }
 
 module.exports = burger;
