@@ -1,7 +1,25 @@
 <h1>Eat Da Burger</h1>
 
+<h2>Burgers to be Eaten</h2>
+
 <ul class="list-group">
     {{#each burger}}
+    {{#unless devoured}}
+
+        <li class="list-group-item">{{burger_name}}
+            <button class="devour">Devour Burger</button>
+        </li>
+    
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Devoured Burgers</h2>
+
+<ul class="list-group">
+    {{#each burger}}
+    {{#if devoured}}
     <li class="list-group-item">{{burger_name}}</li>
+    {{/if}}
     {{/each}}
 </ul>

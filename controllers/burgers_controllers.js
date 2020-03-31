@@ -21,12 +21,13 @@ router.put('/api/burgers/:id', (req, res) => {
     let condition = `id = ${req.params.id}`;
 
     burger.update({
-        burger_name: req.body.burger_name,
+        devoured: true,
     }, condition, function (result) {
         if (result.changeRows === 0) {
             return res.status(404).end();
         } else {
             res.status(200).end();
+            res.redirect('/');
         }
     });
 });
