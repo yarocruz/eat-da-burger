@@ -11,6 +11,11 @@ const burger = {
             callback(res);
         })
     },
+    update: function (objColVals, condition, callback) {
+        orm.updateOne('burgers', objColVals, condition, function (res) {
+            callback(res);
+        })
+    }
 }
 
 module.exports = burger;
