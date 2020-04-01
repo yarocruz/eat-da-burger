@@ -10,7 +10,7 @@ $(document).on("click", '.devour', function (event) {
     }).then(() => {
         console.log("burger was devoured");
         // Reload the page to get the updated list
-
+        location.reload();
     }
     );
 })
