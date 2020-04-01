@@ -3,12 +3,14 @@
 
     <h1 class="mb-4">Eat Da Burger</h1>
 
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="type a burger name" aria-label="burger name" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-            <span class="input-group-text" id="burger-btn">Add a Burger</span>
+    <form class="add-burger">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="burger_name" placeholder="type a burger name" aria-label="burger name" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button type="submit" class="input-group-text" id="burger-btn">Add a Burger</button>
+            </div>
         </div>
-    </div>
+    </form>
 
     <h3 class="my-4">Added Burgers</h3>
 
@@ -34,4 +36,5 @@
         {{/if}}
         {{/each}}
     </ul>
+    
 </div>

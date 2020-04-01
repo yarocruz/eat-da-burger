@@ -15,12 +15,15 @@ $(document).on("click", '.devour', function (event) {
     );
 })
 
-$(document).on("click", '#burger-btn', function (event) {
-    let newBurger = {
-        name: $('.form-control').val().trim()
-    }
+$(document).on("submit", '.add-burger', function (event) {
 
-    //Send the PUT request.
+    event.preventDefault();
+
+    let newBurger = {
+        burger_name: $('.form-control').val().trim()
+    }
+    //console.log(newBurger);
+    //Send the POST request.
     $.ajax({
         url: "/api/burgers/",
         type: "POST",
@@ -32,4 +35,3 @@ $(document).on("click", '#burger-btn', function (event) {
     }
     );
 })
-
