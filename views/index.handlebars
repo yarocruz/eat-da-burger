@@ -4,10 +4,11 @@
 
 <ul class="list-group">
     {{#each burger}}
-    {{#unless devoured}}
-
+    {{#unless this.devoured}}
+       
         <li class="list-group-item">{{burger_name}}
-            <button class="devour">Devour Burger</button>
+            <button class="devour" data-id="{{this.id}}" data-devoured={{devoured}}>Devour Burger</button>
+        
         </li>
     
     {{/unless}}
@@ -18,8 +19,8 @@
 
 <ul class="list-group">
     {{#each burger}}
-    {{#if devoured}}
-    <li class="list-group-item">{{burger_name}}</li>
+    {{#if this.devoured}}
+    <li class="list-group-item">{{this.burger_name}}</li>
     {{/if}}
     {{/each}}
 </ul>
