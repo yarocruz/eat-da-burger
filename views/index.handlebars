@@ -1,26 +1,37 @@
-<h1>Eat Da Burger</h1>
+<div class="container">
+    <p class="burger-icon">🍔</p>
 
-<h2>Burgers to be Eaten</h2>
+    <h1 class="mb-4">Eat Da Burger</h1>
 
-<ul class="list-group">
-    {{#each burger}}
-    {{#unless this.devoured}}
-       
-        <li class="list-group-item">{{burger_name}}
-            <button class="devour" data-id="{{this.id}}" data-devoured={{devoured}}>Devour Burger</button>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="type a burger name" aria-label="burger name" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <span class="input-group-text" id="burger-btn">Add a Burger</span>
+        </div>
+    </div>
+
+    <h3 class="my-4">Added Burgers</h3>
+
+    <ul class="list-group">
+        {{#each burger}}
+        {{#unless this.devoured}}
         
-        </li>
-    
-    {{/unless}}
-    {{/each}}
-</ul>
+            <li class="list-group-item">{{burger_name}}
+                <button class="devour" data-id="{{this.id}}" data-devoured={{devoured}}>Devour Burger</button>
+            
+            </li>
+        
+        {{/unless}}
+        {{/each}}
+    </ul>
 
-<h2>Devoured Burgers</h2>
+    <h3 class="my-4">Devoured Burgers</h3>
 
-<ul class="list-group">
-    {{#each burger}}
-    {{#if this.devoured}}
-    <li class="list-group-item">{{this.burger_name}}</li>
-    {{/if}}
-    {{/each}}
-</ul>
+    <ul class="list-group">
+        {{#each burger}}
+        {{#if this.devoured}}
+        <li class="list-group-item devoured">{{this.burger_name}}</li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>

@@ -15,3 +15,21 @@ $(document).on("click", '.devour', function (event) {
     );
 })
 
+$(document).on("click", '#burger-btn', function (event) {
+    let newBurger = {
+        name: $('.form-control').val().trim()
+    }
+
+    //Send the PUT request.
+    $.ajax({
+        url: "/api/burgers/",
+        type: "POST",
+        data: newBurger
+    }).then(() => {
+        console.log("burger was added");
+        // Reload the page to get the updated list
+        location.reload();
+    }
+    );
+})
+

@@ -1,0 +1,12 @@
+.container {
+	max-width: 900px;
+	text-align: center;
+}
+
+.burger-icon {
+	font-size: 100px;
+}
+
+.devoured {
+	color: #a9aeb5;
+}
