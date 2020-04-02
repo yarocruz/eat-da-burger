@@ -12,29 +12,43 @@
         </div>
     </form>
 
-    <h3 class="my-4">Added Burgers</h3>
-
-    <ul class="list-group">
-        {{#each burger}}
-        {{#unless this.devoured}}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5>Added Burgers</h5>
+                </div>
+                <ul class="list-group">
+                {{#each burger}}
+                {{#unless this.devoured}}
+                
+                    <li class="list-group-item ">{{burger_name}}
+                        <button class="devour ml-2" data-id="{{this.id}}" data-devoured={{devoured}}>Devour It!</button>
+                    
+                    </li>
+                
+                {{/unless}}
+                {{/each}}
+                </ul>
+            </div>
+        </div>
+       
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    <h5>Devoured Burgers</h5>
+                </div>
+                <ul class="list-group">
+                {{#each burger}}
+                {{#if this.devoured}}
+                <li class="list-group-item devoured">{{this.burger_name}}</li>
+                {{/if}}
+                {{/each}}
+                </ul>
+            </div>
+        </div>
         
-            <li class="list-group-item">{{burger_name}}
-                <button class="devour" data-id="{{this.id}}" data-devoured={{devoured}}>Devour Burger</button>
-            
-            </li>
-        
-        {{/unless}}
-        {{/each}}
-    </ul>
-
-    <h3 class="my-4">Devoured Burgers</h3>
-
-    <ul class="list-group">
-        {{#each burger}}
-        {{#if this.devoured}}
-        <li class="list-group-item devoured">{{this.burger_name}}</li>
-        {{/if}}
-        {{/each}}
-    </ul>
     
+    </div>
+
 </div>
