@@ -22,16 +22,20 @@ $(document).on("submit", '.add-burger', function (event) {
     let newBurger = {
         burger_name: $('.form-control').val().trim()
     }
-    //console.log(newBurger);
-    //Send the POST request.
-    $.ajax({
-        url: "/api/burgers/",
-        type: "POST",
-        data: newBurger
-    }).then(() => {
-        console.log("burger was added");
-        // Reload the page to get the updated list
-        location.reload();
+
+    if (newBurger.burger_name === '') {
+        console.log('Please enter a Burger Name');
+    } else {
+        //console.log(newBurger);
+        //Send the POST request.
+        $.ajax({
+            url: "/api/burgers/",
+            type: "POST",
+            data: newBurger
+        }).then(() => {
+            console.log("burger was added");
+            // Reload the page to get the updated list
+            location.reload();
+        });
     }
-    );
 })
