@@ -5,7 +5,7 @@
 
 Eat Da Burger is a full stack web application that lets you add a burger and then devour it. It's just a prototype web app to showcase a basic [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app. At the moment this app is just a CRU app.
 
-This app was built using the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) where an ORM file was used to make general purpose SQL queries that can later be reused and views folders for dynamic rendering of HTML.
+This app was built using the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) framework where an ORM file was used to make general purpose SQL queries that can later be reused and views folders for dynamic rendering of HTML.
 
 ## Technologies
 
@@ -29,7 +29,7 @@ If you wish to see a working demo of this app you can go [here](https://aqueous-
 
 ## Contributing
 
-If you wish to contribute to this project pleas do a pull request. That be super cool.
+If you wish to contribute to this project please do a pull request. That be super cool.
 
 ## Questions?
 
